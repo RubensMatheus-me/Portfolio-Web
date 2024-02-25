@@ -1,10 +1,39 @@
+body {
+	font-family: sans-serif;
+}
+
 .container {
 	border: 1px solid black;
 	margin: 20px;
+	padding: 10;
 }
-.h1 {
-	text-align: center;
+img.eu {
+	float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 10px 0;
+	width: 300;
+	height: 300;
 }
 .perfil {
-	right: 50px;
+	font-size: 30px;
+	text-align: center;
+	float: right;
+	margin-top: 30px;
+	margin-left: 20px;
+	
+}
+.iconGithub-object {
+	width: 60;
+	height: 60;
+	left: 50px;
+	margin-left: 70;
+}
+.iconLinkedin-object {
+	width: 60;
+	height: 60;
+	margin-left: 70;
+}
+p.cabecalho {
+	margin-top: 75px;
 }
