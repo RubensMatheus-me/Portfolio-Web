@@ -1,16 +1,18 @@
+@import url(variable.css);
+
 body {
 	font-Family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: rgb(226, 219, 219);
 	color: gray;
 
 }
-*{
+*, *::before, *::after{
 	padding: 0;
 	margin: 0;
 }
 
 .site-header, .site-footer {
-	background-color: #46220f;
+	background-color: var(--primary-color);
 	color: white;
 	padding: 10px 0;
 }
@@ -34,7 +36,9 @@ a#menubar:hover {
 	width: 1200px;
 	padding: 0 20px;
 	margin: auto;
+	
 }
+
 .picture{
 	width: 250px;
 	height: 250px;
@@ -42,6 +46,7 @@ a#menubar:hover {
 	border-radius: 250px;
 	object-fit: cover;
 	margin-right: 40px;
+	animation: fadeIn 2s ease-in-out;
 }
 
 .clearfix::after {
@@ -56,15 +61,22 @@ a#menubar:hover {
 }
 .project-items{
 	background-color: white;
-	box-shadow: 0 0 10px #333;
+	box-shadow: 0 0 10px var(--gray-color);
 	border-radius: 5px;
 	margin-top: 20px;
+}
+
+.project-items:hover {
+	box-shadow: 0 0 15px black;
+	transition: box-shadow var(--transition-speed);
+	transform: scale(1, 1.01);
+
 }
 .project-items img {
 	width: 100%;
 	height: 300px;
 	object-fit: contain;
-	border-bottom: 3px solid #333;
+	border-bottom: 3px solid var(--gray-color);
 }
 .project-info {
 	padding: 10px;
@@ -72,12 +84,12 @@ a#menubar:hover {
 }
 
 .redirect-projectGame{
-	color: #46220f;
+	color: var(--primary-color);
 	text-decoration: none;
 
 }
 .redirect-github {
-	color: #46220f;
+	color: var(--primary-color);
 	text-decoration: none;
 }
 
@@ -108,7 +120,7 @@ a#menubar:hover {
 
 .habilities-icons{
 	background-color: white;
-	box-shadow: 0 0 10px #333;
+	box-shadow: 0 0 10px var(--gray-color);
 	border-radius: 5px;
 	margin-top: 20px;
 }
@@ -116,7 +128,7 @@ a#menubar:hover {
 	width: 100%;
 	height: 100px;
 	object-fit: contain;
-	border-bottom: 3px solid #333;
+	border-bottom: 3px solid var(--gray-color);
 }
 
 .habilities-info {
@@ -134,9 +146,39 @@ a#menubar:hover {
 	text-decoration: none;
 	padding: 15px 32px;
 	cursor: pointer;
+	margin-left: 20px;
+	margin: center;
 }
 .botao-contato:hover{
 	background-color: blue;
 	color: white;
-	transform: scale(1,2)
+	transform: scale(1,1.1)
+}
+
+@media screen and (max-width: 768px) {
+	.main-navigation ul{
+		flex-direction: column;
+		background-color: var(--primary-color);
+	}
+	.site-header {
+		flex-direction: column;
+	}
+
+	.main-navigation li {
+		margin-bottom: 10px;
+		font-size: large;
+	}
+
+	.container {
+		text-align: center;
+	}
+
+	.picture{
+		float: none;
+		margin: auto;
+	}
+}
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
