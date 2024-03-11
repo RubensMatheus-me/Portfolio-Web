@@ -62,7 +62,6 @@ a#menubar:hover {
 	float: left;
 	border-radius: 250px;
 	object-fit: cover;
-
 	animation: fadeIn 2s ease-in-out;
 }
 
@@ -215,9 +214,18 @@ a#menubar:hover {
 	object-fit: contain;
 
 }
-@media screen and (max-width: 768px) {
-	
-}
+@media screen AND (max-width:768px) {
+	#side {
+		width: 50px;
+		height: 109vh; 
+   }
+	#side .txt {
+		display: none;
+	}
+	#side .h3{
+		display: none;
+   }
+  }
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
