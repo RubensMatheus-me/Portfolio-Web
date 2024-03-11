@@ -3,12 +3,14 @@
 body {
 	font-Family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: rgb(226, 219, 219);
-	color: gray;
+	color: rgb(76, 76, 76);
+	font-size: large;
 
 }
 *, *::before, *::after{
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 .site-header, .site-footer {
@@ -16,10 +18,23 @@ body {
 	color: white;
 	padding: 10px 0;
 }
+
+.site-header {
+	position: fixed;
+	margin: auto;
+	list-style: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
 .main-navigation ul{
 	display: flex;
 	justify-content: center;
 	list-style-type: none;
+	list-style: none;
+	margin: 0;
+
 }
 .main-navigation a{
 	color: white;
@@ -29,14 +44,16 @@ body {
 	padding: 0 15px;
 }
 a#menubar:hover {
-	color:chocolate;
+	color:#aaaaaa;
 }
 
 .container{
 	width: 1200px;
 	padding: 0 20px;
 	margin: auto;
-	
+}
+.titulo {
+	color: black;
 }
 
 .picture{
@@ -45,7 +62,7 @@ a#menubar:hover {
 	float: left;
 	border-radius: 250px;
 	object-fit: cover;
-	margin-right: 40px;
+
 	animation: fadeIn 2s ease-in-out;
 }
 
@@ -54,34 +71,6 @@ a#menubar:hover {
 	clear: both;
 	display: table;
 }
-.project-game{
-	display: grid;
-	gap: 20px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.project-items{
-	background-color: white;
-	box-shadow: 0 0 10px var(--gray-color);
-	border-radius: 5px;
-	margin-top: 20px;
-}
-
-.project-items:hover {
-	box-shadow: 0 0 15px black;
-	transition: box-shadow var(--transition-speed);
-	transform: scale(1, 1.01);
-
-}
-.project-items img {
-	width: 100%;
-	height: 300px;
-	object-fit: contain;
-	border-bottom: 3px solid var(--gray-color);
-}
-.project-info {
-	padding: 10px;
-	text-align: center;
-}
 
 .redirect-projectGame{
 	color: var(--primary-color);
@@ -89,7 +78,7 @@ a#menubar:hover {
 
 }
 .redirect-github {
-	color: var(--primary-color);
+	color: black;
 	text-decoration: none;
 }
 
@@ -108,10 +97,75 @@ a#menubar:hover {
 	font-size: 30px;
 }
 
+.project-game {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.project-items {
+	display: flex;
+	justify-content: center;
+    position: relative;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+	transition: 0.5s;
+	width: 350px;
+    height: 350px;
+}
+
+.project-items:hover {
+	height: 400px;
+}
+
+.project-items .card-img {
+	position: absolute;
+	height: auto;
+	width: 250px;
+	top: 0px;
+	transition: 0.5s;
+}
+
+.project-items .card-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.project-items:hover .card-img {
+	top: -100px;
+	scale: 0.75;
+}
+
+.project-items .project-info {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	position: absolute;
+	top: 250px;
+	width: 100%;
+	padding: 0px 30px;
+	text-align: center;
+	height: 30px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+
+.block-hover {
+	margin-top: 25px;
+}
+
+.project-items:hover .project-info {
+	top: 130px;
+	height: 250px;
+}
+
 .formation {
 	margin-top: 20px;
 	text-align: center;
 }
+
 .habilities{
 	display: grid;
 	gap: 20px;
@@ -136,47 +190,33 @@ a#menubar:hover {
 	text-align: center;
 	font-size: 17px;
 }
-.botao-contato {
-	border: solid 1px blue;
-	border-radius: 8px;
-	color: white;
-	background-color: blue;
-	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-	font-size: 16px;
-	text-decoration: none;
-	padding: 15px 32px;
-	cursor: pointer;
-	margin-left: 20px;
-	margin: center;
-}
-.botao-contato:hover{
-	background-color: blue;
-	color: white;
-	transform: scale(1,1.1)
+
+.div-contato {
+	display: flex;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	justify-content: center;
+	text-align: center;
+	padding: 0px 0px;
 }
 
+.button-info {
+	padding: 10px;
+	text-align: center;
+}
+
+.contato-icons {
+	margin-top: 20px;
+}
+
+.contato-icons img {
+	width: 100%;
+	height: 100px;
+	object-fit: contain;
+
+}
 @media screen and (max-width: 768px) {
-	.main-navigation ul{
-		flex-direction: column;
-		background-color: var(--primary-color);
-	}
-	.site-header {
-		flex-direction: column;
-	}
-
-	.main-navigation li {
-		margin-bottom: 10px;
-		font-size: large;
-	}
-
-	.container {
-		text-align: center;
-	}
-
-	.picture{
-		float: none;
-		margin: auto;
-	}
+	
 }
 @keyframes fadeIn {
 	from {opacity: 0;}
