@@ -54,6 +54,8 @@ a#menubar:hover {
 }
 .titulo {
 	color: black;
+	text-align: center;
+	font-size: 25px;
 }
 
 .picture{
@@ -70,6 +72,9 @@ a#menubar:hover {
 	clear: both;
 	display: table;
 }
+#sobre-descricao {
+	text-align: center;
+}
 
 .redirect-projectGame{
 	color: var(--primary-color);
@@ -79,6 +84,9 @@ a#menubar:hover {
 .redirect-github {
 	color: black;
 	text-decoration: none;
+}
+#minigithub {
+	margin-top: 75px;
 }
 
 .container h2 {
@@ -91,6 +99,7 @@ a#menubar:hover {
 .picture-github{
 	width: 30px;
 	height: 30px;
+	margin-left: 8px;
 }
 .p {
 	font-size: 30px;
@@ -100,6 +109,7 @@ a#menubar:hover {
     display: flex;
     justify-content: center;
     position: relative;
+	gap: 20px;
 }
 
 .project-items {
@@ -128,9 +138,11 @@ a#menubar:hover {
 
 .project-items .card-img img{
 	width: 100%;
-	height: 100%;
+	height: 200px;
 	object-fit: cover;
 }
+
+
 .project-items:hover .card-img {
 	top: -100px;
 	scale: 0.75;
@@ -192,11 +204,16 @@ a#menubar:hover {
 
 .div-contato {
 	display: flex;
-	gap: 20px;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	justify-content: center;
 	text-align: center;
 	padding: 0px 0px;
+	align-items: center;
+	gap: 20px;
+}
+
+.div-contato img {
+	height: 100px;
+	width: 100px;
 }
 
 .button-info {
@@ -214,17 +231,63 @@ a#menubar:hover {
 	object-fit: contain;
 
 }
+
+
+
 @media screen AND (max-width:768px) {
-	#side {
-		width: 50px;
-		height: 109vh; 
-   }
-	#side .txt {
-		display: none;
+	
+	.picture {
+		display: flex;
+		float: none;
+		justify-content: center;
+		text-align: center;
+		margin: auto;
+		margin-top: 4rem;
 	}
-	#side .h3{
-		display: none;
-   }
+	.project-items {
+		flex-direction: column;
+		width: auto;
+	}
+	.clearfix {
+		text-align: center;
+	}
+	.site-header a{
+		margin: auto;
+	}
+	.project-game {
+		flex-direction: column;
+		gap: 20px;
+
+	}
+
+	.card-img {
+		justify-content: center;
+		margin: 4em 10em 5em 4em;
+		display: block;
+	}
+	
+	.project-items .card-img img {
+		width: 220px;
+		height: 150px;
+		object-fit: cover;
+	}
+
+	.container {
+		width: auto;
+		height: auto;
+	}
+	.titulo {
+		text-align: center;
+	}
+	.div-contato {
+		flex-direction: column;
+	}
+
+	#sobre {
+		margin-top: 100px;
+
+	}
+
   }
 @keyframes fadeIn {
 	from {opacity: 0;}
