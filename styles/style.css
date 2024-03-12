@@ -165,7 +165,7 @@ a#menubar:hover {
 
 
 .block-hover {
-	margin-top: 25px;
+	margin-top: 55px;
 }
 
 .project-items:hover .project-info {
@@ -287,6 +287,11 @@ a#menubar:hover {
 	#sobre {
 		margin-top: 100px;
 
+	}
+
+	#minigithub{
+		margin-top: 0;
+		display: right;
 	}
 
   }
