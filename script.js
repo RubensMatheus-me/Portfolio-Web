@@ -8,13 +8,20 @@ function modifierTheme() {
 
 function changeIconTheme(theme) {
     const image = document.getElementById('iconLightTheme') || document.getElementById('iconDarkTheme');
-    if (theme === 'dark-theme') {
+    if(theme === 'dark-theme') {
         image.setAttribute("src", "img/icons/iconDarkMode.png");
         image.setAttribute("id", "iconDarkTheme");
     } else {
         image.setAttribute("src", "img/icons/iconLightMode.png");
         image.setAttribute("id", "iconLightTheme");
     }
-
 }
 
+function copyContact(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        alert('Copiado!');
+    },function(error) {
+        console.error('erro');  
+    });
+    
+}

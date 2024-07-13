@@ -172,6 +172,20 @@ a#menubar:hover {
 	transition: 0.5s;
 }
 
+.copyButton {
+	background: var(--copy-button, #0066A2);
+	color: var(--word-copy-button, #000);
+	border-color: var(--copy-button, #0066A2);
+	height: 40px;
+	width: 80px;
+	text-shadow: none;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+
+
 #iconLightTheme {
 	height: 33px;
 	width: 42px;
@@ -403,6 +417,8 @@ a#menubar:hover {
 	--project-items-color:#f1ecec;
 	--project-items-description-color: #383838;
 	--habilities-cards-color: white;
+	--copy-button: #0066A2;
+	--word-copy-button: #000;
 }
 
 [data-theme = 'dark-theme'] {
@@ -412,4 +428,6 @@ a#menubar:hover {
 	--project-items-color:#121212;
 	--project-items-description-color: #2894ec;
 	--habilities-cards-color:#121212;
+	--copy-button: #0066A2;
+	--word-copy-button: #dbd2d2;;
 }
