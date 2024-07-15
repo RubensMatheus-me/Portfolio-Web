@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleRepositorie.css">
+    <title>Consulta de Repositórios</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <button class="back-button">
+                <a href="index.html">Voltar</a>
+            </button>
+        </div>
+    </div>
+    <div class="container main-content">
+        <h1>Consulta de Repositórios</h1>
+        <input type="text" id="inputNomeUsuario" placeholder="Informe o perfil"/>
+        <button class="consulta-button" onclick="pegarRepositorio()">Consultar Repositórios</button> 
+        <ul id="listaRepositorios"></ul>
+    </div>
+    <script src="scripts/repositories.js"></script>
+</body>
+</html>

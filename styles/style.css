@@ -184,8 +184,6 @@ a#menubar:hover {
 	box-shadow: none;
 }
 
-
-
 #iconLightTheme {
 	height: 33px;
 	width: 42px;
@@ -409,6 +407,7 @@ a#menubar:hover {
 	from {opacity: 0;}
 	to {opacity: 1;}
 }
+
 
 [data-theme = 'light-theme'] {
 	--background-color: #ebe2e2;
