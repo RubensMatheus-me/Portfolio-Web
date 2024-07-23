@@ -1,3 +1,47 @@
+var header = document.getElementById('header');
+var navigationHeader = document.getElementById('navigation-header');
+var content = document.getElementById('content');
+var showSidebar = false;
+
+function toggleSidebar() {
+
+    showSidebar = !showSidebar;
+    if(showSidebar) {
+        navigationHeader.style.marginLeft = '-10vw';
+        navigationHeader.style.animationName = 'showSidebar';
+        content.style.filter = 'blur(1.5px)'
+    }else {
+        navigationHeader.style.marginLeft = '-100vw';
+        navigationHeader.style.animationName = 'showSidebar2';
+        content.style.filter = '';
+    }
+}
+function closeSidebar() {
+    if(showSidebar) {
+        showSidebar = true;
+        toggleSidebar();
+    }
+}
+
+//fechar sidebar ao clicar fora dela
+document.addEventListener('click', function(event) {
+    if (!navigationHeader.contains(event.target) && !event.target.closest('.btn-icon-header')) {
+        closeSidebar();
+    }
+});
+
+window.addEventListener('resize', function(event) {
+    if(window.innerWidth > 768 && showSidebar) 
+    {  
+        showSidebar = true;
+        toggleSidebar();
+    }
+});
+
+
+
+    
+
 function modifierTheme() {
     const theme = document.body.getAttribute('data-theme');
     const newTheme = theme == 'dark-theme' ? 'light-theme' : 'dark-theme';

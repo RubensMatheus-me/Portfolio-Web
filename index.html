@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="styles/style.css" rel="stylesheet">
-	<title>Portfolio Rubens</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
 </head>
 <body data-theme = 'light-mode'>
-	<header class="site-header">
-
-		<div class="container">
-			<nav class="main-navigation">
-				<ul>
-					<li><a id="menubar" href="#sobre">Sobre</a></li>
-					<li><a id="menubar" href="repositories.html">Repositorios</a></li>
-					<li><a id="menubar" href="#projetos">Projetos</a></li>
-					<li><a id="menubar" href="#formacao">Formação</a></li>
-					<li><a id="menubar" href="#contato">Contato</a></li>
-					<li><a id="menubar" href="#icon"></a> <img id="iconLightTheme" src="img/icons/iconLightMode.png" alt="Icone Light Mode"></li>
-					<li><a id="menubar">
-						<label class="switch">
-							<input type="checkbox" onclick="modifierTheme()">
-							<span class="slider"></span>
-					  	</label></a></li>	
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<main class="container">
-			<h1 class="titulo" id="sobre">Sobre Mim</h1>
+    <header class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn-icon-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <nav class="main-navigation">
+            <ul>
+                <li><a id="menubar" href="#sobre">Sobre</a></li>
+                <li><a id="menubar" href="repositories.html">Repositorios</a></li>
+                <li><a id="menubar" href="#projetos">Projetos</a></li>
+                <li><a id="menubar" href="#formacao">Formação</a></li>
+                <li><a id="menubar" href="#contato">Contato</a></li>
+                <li><a id="menubar" href="#icon"></a> <img id="iconLightTheme" src="img/icons/iconLightMode.png" alt="Icone Light Mode"></li>
+                <li><a id="menubar">
+                    <label class="switch">
+                        <input type="checkbox" onclick="modifierTheme()">
+                        <span class="slider"></span>
+                    </label></a></li>	
+            </ul>
+        </nav>
+        <div class="navigation-header" id="navigation-header">
+            <button onclick="toggleSidebar()" class="btn-icon-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+			<p>Ferramentas</p>
+            <a id = "menuSidebar" href="repositories.html">Buscar Repositorios</a>
+        </div>
+    </header>
+    <main tabindex = "0" onfocus="closeSidebar()" class="content" id="content">
+        <h1 class="titulo" id="sobre">Sobre Mim</h1>
 			<p id="sobre-descricao">Olá, Meu nome é Rubens Matheus e tenho 19 anos.</p>
-
 		<section class="clearfix">
 				<img class="picture" id="sobre" src="img/Rubolas2.jpg" alt="Minha foto">
-				<a href="https://github.com/RubensMatheus-me"><img class="picture-github" id= "minigithub"src="img/icons/iconGitHub.png" alt="Foto github"></a><br/>
-				<a href="https://www.linkedin.com/in/rubens-matheus-876834252/"><img class="picture-github" src="img/icons/iconLinkedin.png" alt="Foto linkedin"></a>
+                <div class="icons-pic">
+                    <a href="https://github.com/RubensMatheus-me"><img class="picture-github" id= "minigithub"src="img/icons/iconGitHub.png" alt="Foto github"></a><br/>
+				    <a href="https://www.linkedin.com/in/rubens-matheus-876834252/"><img class="picture-github" id="minilinkedin"src="img/icons/iconLinkedin.png" alt="Foto linkedin"></a>
+                </div>
+			
 		</section>	
 		<section class="objetivo">
 			<h2 class="titulo">Objetivos</h2><br/>
@@ -145,8 +159,9 @@
 			</section>
 		</section>
 	</main>
-	<footer class="site-footer">
+    </main>
+    <footer class="footer">
 	</footer>
-	<script src="/scripts/script.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 </html>
