@@ -118,3 +118,10 @@ ul li {
     text-align: center; 
     word-break: break-word; 
 }
+
+@media screen and (max-width: 768px) {
+    .pokemon {
+        width: calc(50% - 55px);
+        margin: 10px;
+    }
+}

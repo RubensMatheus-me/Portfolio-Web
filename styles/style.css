@@ -197,6 +197,8 @@ a#menuSidebar:hover {
 	box-shadow: 0 0 10px var(--gray-color);
 	border-radius: 5px;
 	margin-top: 20px;
+	transition: transform 0.3s ease;
+    position: relative;
 }
 .habilities-icons img {
 	width: 100%;
@@ -204,6 +206,7 @@ a#menuSidebar:hover {
 	object-fit: contain;
 	border-bottom: 3px solid var(--gray-color);
 }
+
 
 .habilities-info {
 	padding: 10px;
@@ -416,15 +419,24 @@ a#menuSidebar:hover {
 
 @media screen AND (max-width:768px) {
 
+	.main-navigation ul li {
+        font-size: 15px; 
+        padding: 10px 5px;
+		letter-spacing: 0.8px;
+    }
+
 	.main-navigation ul {
-		flex-direction:initial;
-
+		margin: 0;
+		padding: 0;
 	}
 
-	.main-navigation li {
-		padding: 10px 5px;
+	.header {
+		padding: 10px 0 ;
 	}
-	
+	.main-navigation a {
+		bottom: 20px;
+	}
+
 	.picture {
 		display: flex;
 		float: none;
@@ -481,8 +493,14 @@ a#menuSidebar:hover {
 		margin-top: 0;
 		display: right;
 	}
+	
+	.navigation-header {
+		padding: 7em;
+	}
+}
+	
 
-  }
+
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
