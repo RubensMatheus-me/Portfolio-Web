@@ -4,3 +4,26 @@
     --transition-speed: 3s
     --background-color: rgb(226, 219, 219);
 }
+[data-theme='light-theme'] {
+    --background-color: #ebe2e2;
+    --words-color: #4c4c4c;
+    --title-color: #000;
+    --project-items-color: #f1ecec;
+    --project-items-description-color: #383838;
+    --habilities-cards-color: white;
+    --copy-button: #0066A2;
+    --word-copy-button: #000;
+    --shadow-picture: #afafaf;
+}
+
+[data-theme='dark-theme'] {
+    --background-color: #292626;
+    --words-color: #dbd2d2;
+    --title-color: #fff;
+    --project-items-color: #121212;
+    --project-items-description-color: #2894ec;
+    --habilities-cards-color: #121212;
+    --copy-button: #0066A2;
+    --word-copy-button: #dbd2d2;
+    --shadow-picture: #1b1b1b;
+}

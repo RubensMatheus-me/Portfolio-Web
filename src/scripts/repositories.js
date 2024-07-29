@@ -25,3 +25,22 @@ function pegarRepositorio() {
             listaRepositorios.appendChild(li);
         });
 }
+
+function modifierTheme() {
+    const theme = document.body.getAttribute('data-theme');
+    const newTheme = theme == 'dark-theme' ? 'light-theme' : 'dark-theme';
+    document.body.setAttribute('data-theme', newTheme);
+    changeIconTheme(newTheme);
+}
+
+
+function changeIconTheme(theme) {
+    const image = document.getElementById('iconLightTheme') || document.getElementById('iconDarkTheme');
+    if (theme === 'dark-theme') {
+        image.setAttribute("src", "../../src/assets/img/icons/iconDarkMode.png");
+        image.setAttribute("id", "iconDarkTheme");
+    } else {
+        image.setAttribute("src", "../../src/assets/img/icons/iconLightMode.png");
+        image.setAttribute("id", "iconLightTheme");
+    }
+}

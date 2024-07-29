@@ -60,7 +60,7 @@ function getLocationAPI() {
             updateResults(date, time, utcOffset);
         })
         .catch(error => {
-            console.error("Erro ao buscar dados da API:", error);
+            console.error("Erro:", error);
         });
 }
 
@@ -92,3 +92,5 @@ function updateResults(date, time, utcOffset) {
         <li>UTC Offset: ${utcOffset}</li>
     `;
 }
+
+
