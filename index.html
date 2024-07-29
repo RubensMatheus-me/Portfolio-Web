@@ -20,7 +20,7 @@
                 <li><a id="menubar" href="#projetos">Projetos</a></li>
                 <li><a id="menubar" href="#formacao">Formação</a></li>
                 <li><a id="menubar" href="#contato">Contato</a></li>
-                <li><a id="menubar" href="#icon"></a> <img id="iconLightTheme" src="img/icons/iconLightMode.png" alt="Icone Light Mode"></li>
+                <li><a id="menubar" href="#icon"></a> <img id="iconLightTheme" src="src/assets/img/icons/iconLightMode.png" alt="Icone Light Mode"></li>
                 <li><a id="menubar">
                     <label class="switch">
                         <input type="checkbox" onclick="modifierTheme()">
@@ -35,17 +35,19 @@
                 </svg>
             </button>
 			<p>Ferramentas</p>
-            <a id = "menuSidebar" href="repositories.html">Buscar Repositorios</a>
+            <a id = "menuSidebar" href="src/pages/repositories.html">Buscar Repositorios</a>
+			<a id = "menuSidebar" href="src/pages/pokemon.html">Procurar Pokemon</a>
+			<a id = "menuSidebar" href="src/pages/globalTime.html">Horário Global</a>
         </div>
     </header>
     <main tabindex = "0" onfocus="closeSidebar()" class="content" id="content">
         <h1 class="titulo" id="sobre">Sobre Mim</h1>
 			<p id="sobre-descricao">Olá, Meu nome é Rubens Matheus e tenho 19 anos.</p>
 		<section class="clearfix">
-				<img class="picture" id="sobre" src="img/Rubolas2.jpg" alt="Minha foto">
+				<img class="picture" id="sobre" src="src/assets/img/Rubolas2.jpg" alt="Minha foto">
                 <div class="icons-pic">
-                    <a href="https://github.com/RubensMatheus-me"><img class="picture-github" id= "minigithub"src="img/icons/iconGitHub.png" alt="Foto github"></a><br/>
-				    <a href="https://www.linkedin.com/in/rubens-matheus-876834252/"><img class="picture-github" id="minilinkedin"src="img/icons/iconLinkedin.png" alt="Foto linkedin"></a>
+                    <a href="https://github.com/RubensMatheus-me"><img class="picture-github" id= "minigithub"src="src/assets/img/icons/iconGitHub.png" alt="Foto github"></a><br/>
+				    <a href="https://www.linkedin.com/in/rubens-matheus-876834252/"><img class="picture-github" id="minilinkedin"src="src/assets/img/icons/iconLinkedin.png" alt="Foto linkedin"></a>
                 </div>
 			
 		</section>	
@@ -69,7 +71,7 @@
 					<div class="project-game">
 						<article class="project-items">
 							<div class="card-img">
-								<img class="image-projectGame" src="img/spaceinvaders.jpg" alt="Projeto jogo">
+								<img class="image-projectGame" src="src/assets/img/spaceinvaders.jpg" alt="Projeto jogo">
 							</div>
 								<div class="project-info">
 									<a class="redirect-projectGame" href="https://github.com/RubensMatheus-me/SpaceInvaders"><h3>Space Invaders</h3></a>
@@ -81,7 +83,7 @@
 						</article>
 						<article class="project-items">
 							<div class="card-img">
-								<img class="image-projectGame" src="img/portalaluno.jpeg" alt="Projeto jogo">
+								<img class="image-projectGame" src="src/assets/img/portalaluno.jpeg" alt="Projeto jogo">
 							</div>
 								<div class="project-info">
 									<a class="redirect-projectGame" id = "foto2" href="https://github.com/GustavoLopes2/portal-aluno-front"><h3>Portal do Aluno</h3></a>
@@ -110,31 +112,31 @@
 			<h2 class="titulo" >Habilidades</h2>	
 			<div class="habilities">
 				<article class="habilities-icons">
-						<img class="image-iconPython" src="img/icons/iconPython.png" alt="Icon python">
+						<img class="image-iconPython" src="src/assets/img/icons/iconPython.png" alt="Icon python">
 						<div class="habilities-info">
 							<p>Python</p>
 						</div>
 				</article>
 				<article class="habilities-icons">
-					<img class="image-iconJava" src="img/icons/iconJava.png" alt="Icon java">
+					<img class="image-iconJava" src="src/assets/img/icons/iconJava.png" alt="Icon java">
 					<div class="habilities-info">
 						<p>Java</p>
 					</div>
 				</article>
 				<article class="habilities-icons">
-					<img class="image-iconC" src="img/icons/iconC.png" alt="Icon c">
+					<img class="image-iconC" src="src/assets/img/icons/iconC.png" alt="Icon c">
 					<div class="habilities-info">
 						<p>C</p>
 					</div>
 				</article>
 				<article class="habilities-icons">
-					<img class="image-iconMySQL" src="img/icons/iconMySQL.png" alt="Icon mysql">
+					<img class="image-iconMySQL" src="src/assets/img/icons/iconMySQL.png" alt="Icon mysql">
 					<div class="habilities-info">
 						<p>MySQL</p>
 					</div>
 				</article>
 				<article class="habilities-icons">
-					<img class="image-iconPostgreSQL" src="img/icons/iconPostgreSQL.png" alt="Icon PostgreSQL">
+					<img class="image-iconPostgreSQL" src="src/assets/img/icons/iconPostgreSQL.png" alt="Icon PostgreSQL">
 					<div class="habilities-info">
 						<p>PostgreSQL</p>
 					</div>
@@ -143,11 +145,11 @@
 			<section class="contato", id="contato">
 				<h2 class="titulo" >Contato</h2><br>
 				<div class="div-contato">
-						<a href="mailto:rubensmatheus1009@gmail.com"><img src="img/icons/cartaIcon.png" alt="Icon gmail"></a>
+						<a href="mailto:rubensmatheus1009@gmail.com"><img src="src/assets/img/icons/cartaIcon.png" alt="Icon gmail"></a>
 						<div class="contato-info">
 							<p>rubensmatheus1009@gmail.com</p> <button class="copyButton" id="copyEmail" onclick="copyContact('rubensmatheus1009@gmail.com')" >Copiar</button>
 						</div>
-						<a href="https://wa.link/4t9q0j"><img src="img/icons/iconTelefone.png" alt="Icon telefone"></a>
+						<a href="https://wa.link/4t9q0j"><img src="src/assets/img/icons/iconTelefone.png" alt="Icon telefone"></a>
 						<div class="contato-info">
 							<p>(44) 9 9712-2737</p> <button class="copyButton"  id="copyPhone" onclick="copyContact('(44) 9 9712-2737')">Copiar</button>
 						</div>
@@ -161,6 +163,6 @@
     </main>
     <footer class="footer">
 	</footer>
-	<script src="scripts/script.js"></script>
+	<script src="src/scripts/script.js"></script>
 </body>
 </html>

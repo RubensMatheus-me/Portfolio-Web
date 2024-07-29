@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/pokemon.css">
+    <title>Consulta de Pokemons</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <button class="back-button">
+                <a href="../../index.html">Voltar</a>
+            </button>
+        </div>
+    </div>
+    <div class="container main-content">
+        <h1>Procurar por Pokemon</h1>
+        <input type="text" id="nome-pokemon" placeholder="Informe o Pokemon"/>
+        <div class="buttons">
+            <button class="consultar-pokemon" id = "consultar-pokemon"onclick="searchPokemon()">Consultar Pokemon</button> 
+            <button class="consultar-pokemon-aleatorio" onclick="searchRandomPokemon()">Pokemon Aleatório</button> 
+        </div>
+        <span id="status"></span>
+        <div id="pokemon-results"></div>
+
+
+    </div>
+    <script src="../../src/scripts/pokemon.js"></script>
+</body>
+</html>
